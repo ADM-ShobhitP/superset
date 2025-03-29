@@ -10,7 +10,7 @@ CORS_OPTIONS = {
     "supports_credentials": True,
     "allow_headers":[ "*"],
     "resources": ["*"],
-    "origins": ["http://localhost:3000", "http://10.1.15.122"]
+    "origins": ["http://localhost:3000", "http://10.1.15.45"]
 }
 
 def apply_cors(app):
@@ -32,6 +32,7 @@ SECRET_KEY = '04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb'
 # The check_same_thread=false property ensures the sqlite client does not attempt
 # to enforce single-threaded access, which may be problematic in some edge cases
 SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:password@127.0.0.1:5432/superset'
+# SQLALCHEMY_DATABASE_URI='mysql://10.1.15.45:47335/mindsdb'
 
 SESSION_COOKIE_SECURE = True
 # Flask-WTF flag for CSRF
@@ -110,3 +111,4 @@ WEBDRIVER_OPTION_ARGS = [
 
 WEBDRIVER_BASEURL = "http://localhost:8088"
 WEBDRIVER_BASEURL_USER_FRIENDLY = "http://localhost:8088"
+
